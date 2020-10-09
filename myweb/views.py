@@ -22,10 +22,22 @@ def signup(request):
 
 def logout(req):
     logout_user(req)
-    return redirect('index')
+    return redirect('login')
 
 def united(req):
 	return render(req, 'myweb/united.html')
+
+def savoryfood(req):
+	return render(req, 'myweb/savoryfood.html')
+
+def singledish(req):
+	return render(req, 'myweb/singledish.html')
+
+def snackfood(req):
+	return render(req, 'myweb/snackfood.html')
+
+def sweettreat(req):
+    return render(req,'myweb/sweettreat.html')
 
 def detail(request, question_id):
     return render(request, 'myweb/detail.html')

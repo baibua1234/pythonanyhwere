@@ -69,8 +69,13 @@ TEMPLATES = [
 ]
 
 LOGIN_REDIRECT_URL = 'index'
+LOGOUT_REDIRECT_URL ='login'
 WSGI_APPLICATION = 'mysite.wsgi.application'
 
+#CSS
+STATICFILES_DIRS = [
+    "/pythonanywhere/static/css",
+]
 
 # Database
 # https://docs.djangoproject.com/en/2.1/ref/settings/#databases
