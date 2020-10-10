@@ -10,10 +10,50 @@
 </head>
 <body>
 <style>
-  .responsive {
-    width: 100%;
-    height: auto;
-  }
+  body, html {
+  height: 100%;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.bg-image {
+  /* The image used */
+  background-image: url("https://img2.thaipng.com/20180214/hxw/kisspng-bread-poster-clip-art-donut-bread-background-pattern-5a8507c102f2d2.8786384015186677130121.jpg?fbclid=IwAR0GyrX5_DU9Q4eROwXt2YQmrllJIOiUhGk8XCX4cLw27xFqor4VAtGaig8");
+
+  /* Add the blur effect */
+  filter: blur(8px);
+  -webkit-filter: blur(8px);
+
+  /* Full height */
+  height: 100%;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* Position text in the middle of the page/image */
+.bg-text {
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0, 0.4); /* Black w/opacity/see-through */
+  color: pink;
+  font-weight: bold;
+  border: 3px solid #f1f1f1;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  width: 80%;
+  padding: 20px;
+  text-align: center;
+}
+
           ul {
             list-style-type: none;
             margin: 0;
@@ -34,36 +74,19 @@
             text-decoration: none;
           }
 
-          li a:hover, .dropdown:hover .dropbtn {
-            background-color: red;
-          }
+                 table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
 
-          li.dropdown {
-            display: inline-block;
-          }
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
 
-          .dropdown-content {
-            display: none;
-            position: absolute;
-            background-color: #f9f9f9;
-            min-width: 160px;
-            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-            z-index: 1;
-          }
 
-          .dropdown-content a {
-            color: black;
-            padding: 12px 16px;
-            text-decoration: none;
-            display: block;
-            text-align: left;
-          }
-
-          .dropdown-content a:hover {background-color: #f1f1f1;}
-
-          .dropdown:hover .dropdown-content {
-            display: block;
-          }
 </style>
 
         <ul>
@@ -72,23 +95,83 @@
           <li><a href="/signup">Register</a></li>
           <li><a href="/logins">Login</a></li>
           <li><a href="/logout">Logout</a></li>
-
-          <li class="dropdown">
-            <a href="javascript:void(0)" class="dropbtn">Food</a>
-            <div class="dropdown-content">
-              <a href="/savoryfood">อาหารคาว</a>
-              <a href="/singledish">อาหารจานเดียว</a>
-              <a href="/snackfood">อาหารว่าง</a>
-              <a href="/sweettreat">ขนมหวาน</a>
+          <li><a href="/savoryfood">อาหารคาว</a</li>
+          <li><a href="/singledish">อาหารจานเดียว</a</li>
+          <li><a href="/snackfood">อาหารว่าง</a</li>
+          <li><a href="/sweettreat">ขนมหวาน</a></li>
             </div>
-          </li>
-          </li>
-          <p>Hi! {{user}}</p>
+          <p style="text-align:right">Hi! {{user}}</p>
         </ul>
-<img src="https://scx2.b-cdn.net/gfx/news/hires/2016/howcuttingdo.jpg" alt="Nature" class="responsive" width="600" height="400">
         </div>
       </div>
     </form>
-    <!--เนื้อหา-->
+<div class="bg-image"></div>
+<div class="bg-text">
+    <!--Table-->
+  <h2>ตารางแคลอรี่ในอาหารคาว</h2>
+
+<table>
+  <tr>
+    <th>ชื่อเมนูอาหาร</th>
+    <th>ปริมาณ/หน่วย</th>
+    <th>ปริมาณแคลอรี่</th>
+  </tr>
+  <tr>
+    <td>ส้มตำ</td>
+    <td>1 จาน</td>
+    <td>120 กิโลแคลอรี่</td>
+  </tr>
+  <tr>
+    <td>ข้าวมันไก่ </td>
+    <td>1 จาน</td>
+    <td>600 กิโลแคลอรี่</td>
+  </tr>
+  <tr>
+    <td>ก๋วยเตี๋ยวคั่วไก่</td>
+    <td>1 ชาม</td>
+    <td>435 กิโลแคลอรี่</td>
+  </tr>
+  <tr>
+    <td>กุ้งแช่น้ำปลา</td>
+    <td>1 ตัว</td>
+    <td>14 กิโลแคลอรี่</td>
+  </tr>
+  <tr>
+    <td>กุ้งทอดกระเทียมพริกไทย</td>
+    <td>1 ตัวขนาดกลาง</td>
+    <td>86 กิโลแคลอรี่</td>
+  </tr>
+  <tr>
+    <td>ผัดซีอิ้วใส่ไข่</td>
+    <td>1 จาน</td>
+    <td>440 กิโลแคลลรี่</td>
+  </tr>
+  <tr>
+    <td>แกงเขียวหวานหมูทอด</td>
+    <td>1 ถ้วยล็ก</td>
+    <td>235 กิโลแคลอรี่</td>
+  </tr>
+  <tr>
+    <td>ไก่ KFC สะโพก</td>
+    <td>1 ชิ้น</td>
+    <td>355 กิโลแคลอรี่</td>
+  </tr>
+  <tr>
+    <td>โจ๊กหมู</td>
+    <td>1 ชาม</td>
+    <td>236  กิโลแคลอรี่</td>
+  </tr>
+  <tr>
+    <td>ขนมจีน</td>
+    <td>1 ทัพพี</td>
+    <td>80  กิโลแคลอรี่</td>
+  </tr>
+  <tr>
+    <td>ข้าวขาหมู</td>
+    <td>1 จาน</td>
+    <td>690 กิโลแคลอรี่</td>
+  </tr>
+</table>
+</div>
     </body>
     </html>

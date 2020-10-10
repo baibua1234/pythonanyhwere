@@ -74,36 +74,6 @@
             text-decoration: none;
           }
 
-          li a:hover, .dropdown:hover .dropbtn {
-            background-color: red;
-          }
-
-          li.dropdown {
-            display: inline-block;
-          }
-
-          .dropdown-content {
-            display: none;
-            position: absolute;
-            background-color: #f9f9f9;
-            min-width: 160px;
-            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-            z-index: 1;
-          }
-
-          .dropdown-content a {
-            color: black;
-            padding: 12px 16px;
-            text-decoration: none;
-            display: block;
-            text-align: left;
-          }
-
-          .dropdown-content a:hover {background-color: #f1f1f1;}
-
-          .dropdown:hover .dropdown-content {
-            display: block;
-          }
                  table {
   font-family: arial, sans-serif;
   border-collapse: collapse;
@@ -125,19 +95,12 @@ td, th {
           <li><a href="/signup">Register</a></li>
           <li><a href="/logins">Login</a></li>
           <li><a href="/logout">Logout</a></li>
-
-
-         <li class="dropdown">
-            <a href="javascript:void(0)" class="dropbtn">Food</a>
-            <div class="dropdown-content">
-              <a href="/savoryfood">อาหารคาว</a>
-              <a href="/singledish">อาหารจานเดียว</a>
-              <a href="/snackfood">อาหารว่าง</a>
-              <a href="/sweettreat">ขนมหวาน</a>
+          <li><a href="/savoryfood">อาหารคาว</a</li>
+          <li><a href="/singledish">อาหารจานเดียว</a</li>
+          <li><a href="/snackfood">อาหารว่าง</a</li>
+          <li><a href="/sweettreat">ขนมหวาน</a></li>
             </div>
-          </li>
-          </li>
-          <p>Hi! {{user}}</p>
+          <p style="text-align:right"> Hi! {{user}}</p>
         </ul>
 
         </div>
@@ -146,70 +109,10 @@ td, th {
 </div>
 <div class="bg-image"></div>
 <div class="bg-text">
-  <h2>ตารางแคลอรี่ในอาหาร</h2>
+<h style="font-size:100px">Eating &nbsp; Advice</h>
+<br>
+<br>
+<img src="https://scontent.fbkk22-2.fna.fbcdn.net/v/t1.15752-9/50117187_386459838588615_8284428586073456640_n.png?_nc_cat=107&_nc_sid=ae9488&_nc_eui2=AeFYUQ-XrUwKThuBlj2Ql2CEu5eOotBgMTi7l46i0GAxOPdWFChTP0H4kBb8moX71gAHHMrm7VxNDB3splQmyNxt&_nc_ohc=tlMFUy1jsAgAX_4uiEh&_nc_ht=scontent.fbkk22-2.fna&oh=56bf55b1af1ec2348299f80949a38056&oe=5FA63D8E" alt="Girl in a jacket" width="800" height="400">
 
-<table>
-  <tr>
-    <th>ชื่อเมนูอาหาร</th>
-    <th>ปริมาณ/หน่วย</th>
-    <th>ปริมาณแคลอรี่</th>
-  </tr>
-  <tr>
-    <td>กล้วยบวชชี</td>
-    <td>1 ถ้วยเล็ก</td>
-    <td>152 กิโลแคลอรี่</td>
-  </tr>
-  <tr>
-    <td>กระเพาะปลา</td>
-    <td>1 ชาม</td>
-    <td>150 กิโลแคลอรี่</td>
-  </tr>
-  <tr>
-    <td>ก๋วยเตี๋ยวคั่วไก่</td>
-    <td>1 จาน</td>
-    <td>435 กิโลแคลอรี่</td>
-  </tr>
-  <tr>
-    <td>กุ้งแช่น้ำปลา</td>
-    <td>1 ตัว</td>
-    <td>14 กิโลแคลอรี่</td>
-  </tr>
-  <tr>
-    <td>กุ้งทอดกระเทียมพริกไทย</td>
-    <td>1 ตัวขนาดกลาง</td>
-    <td>86 กิโลแคลอรี่</td>
-  </tr>
-  <tr>
-    <td>กุนเชียงทอด</td>
-    <td>1 ชิ้นเล็ก</td>
-    <td>120 กิโลแคลลรี่</td>
-  </tr>
-  <tr>
-    <td>แกงเขียวหวานหมูอด</td>
-    <td>1 ถ้วยล็ก</td>
-    <td>235 กิโลแคลอรี่</td>
-  </tr>
-  <tr>
-    <td>ไก่ KFC สะโพก</td>
-    <td>1 ชิ้น</td>
-    <td>355 กิโลแคลอรี่</td>
-  </tr>
-  <tr>
-    <td>ขนมครก</td>
-    <td>1 คู่ </td>
-    <td>92  กิโลแคลอรี่</td>
-  </tr>
-  <tr>
-    <td>ขนมจีน</td>
-    <td>1 ทัพพี</td>
-    <td>80  กิโลแคลอรี่</td>
-  </tr>
-  <tr>
-    <td>ข้าวขาหมู</td>
-    <td>1 จาน</td>
-    <td>690 กิโลแคลอรี่</td>
-  </tr>
-</table>
-</div>
     </body>
     </html>
