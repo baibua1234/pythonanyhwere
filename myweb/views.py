@@ -5,9 +5,14 @@ from django.contrib.auth.models import User
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth import login
 
+from .form import addFood,addFoodType
+from .models import FoodType , Food, Calorie
+
 # Create your views here.
 def index(req):
 	return render(req, 'myweb/index.html')
+
+
 
 def signup(request):
     context = {}
@@ -39,12 +44,31 @@ def snackfood(req):
 def sweettreat(req):
     return render(req,'myweb/sweettreat.html')
 
-def detail(request, question_id):
-    return render(request, 'myweb/detail.html')
+#-----DATABASE------------------#
 
-def results(request, question_id):
-    response = "You're looking at the results of question %s."
-    return HttpResponse(response % question_id)
+def showFood(req):
+    food = Food.objects.all()
+    return render(req ,'myweb/allfood.html' ,{'food':food})
 
-def vote(request, question_id):
-    return HttpResponse("You're voting on question %s." % question_id)
+
+def addFoodType(req):
+    if req.method == "POST":
+        form = addFoodType(req.POST)
+        if form.is_valid():
+            form.save()
+            return redirect("index")
+    else:
+        form = addFoodType()
+        context = {'form':form}
+        return render(req, 'myweb/addfood.html',context)
+
+def addfood(req):
+    if req.method == "POST":
+        form = addFood(req.POST)
+        if form.is_valid():
+            form.save()
+            return redirect("index")
+    else:
+        form = addFood()
+        context = {'form':form}
+        return render(req, 'myweb/add.html',context)
